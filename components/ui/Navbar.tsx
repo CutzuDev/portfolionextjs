@@ -30,7 +30,7 @@ function Navbar() {
           <Image alt="" width={50} height={50} src={"/assets/logo.svg"} />
         </Link>
       </div>
-      <ul className="flex items-center justify-center gap-5 rounded-full border border-sky-300/10 bg-sky-900/10 px-5 py-2.5">
+      <ul className="flex items-center justify-center gap-5 rounded-full border border-sky-300/10 bg-sky-900/[7%] px-5 py-2.5">
         {NavLinkA.map((item, index) => (
           <NavLinkC key={index} {...item} />
         ))}
