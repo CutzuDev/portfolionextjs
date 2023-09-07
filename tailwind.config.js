@@ -8,6 +8,7 @@ module.exports = {
     "./app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+  important: true,
   theme: {
     container: {
       center: true,
@@ -18,7 +19,6 @@ module.exports = {
     },
     extend: {
       colors: {},
-
       keyframes: {
         "accordion-down": {
           from: { height: 0 },
