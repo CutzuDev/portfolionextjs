@@ -8,12 +8,12 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-center gap-10">
       <GWrapper>
         <GText opacity="text-opacity-75" className="">
-          New: Our AI integration just landed
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </GText>
       </GWrapper>
       <GWrapper wrapper className="flex items-center justify-center gap-5">
         <GText opacity="text-opacity-75" className="">
-          Do you like my text?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
         </GText>
         <Link href={"https://www.alexfarkas.me/"}>
           <img
