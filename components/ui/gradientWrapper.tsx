@@ -23,7 +23,7 @@ function GWrapper({
   className,
   link,
   wrapper,
-  hover,
+  hover = true,
 }: {
   children: any;
   className?: string;
