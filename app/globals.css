@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --colorTest123: rgba(164, 143, 255, 0.15);
+  --insetGlowColor: 255, 166, 103;
 }
 
 .maskingClass::after {
@@ -17,4 +17,8 @@
   mask-composite: xor;
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+}
+
+body {
+  @apply bg-neutral-900;
 }

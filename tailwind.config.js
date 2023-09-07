@@ -18,9 +18,7 @@ module.exports = {
     },
     extend: {
       colors: {},
-      boxShadow: {
-        insetGlow: "inset 0 -10px 10px var(--colorTest123)",
-      },
+
       keyframes: {
         "accordion-down": {
           from: { height: 0 },

@@ -1,14 +1,26 @@
+import DButton from "@/components/ui/decorativeButton";
+import { cn, gradientText } from "@/lib/utils";
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center gap-10">
-      <div className="rounded-md bg-gradient-to-r from-pink-500  via-red-400 to-blue-500 p-1">
-        <div className="rounded-md bg-black p-5 text-xl font-medium text-white">
-          Hello, gradient
-        </div>
-      </div>
-      <div className="maskingClass shadow-insetGlow relative isolate flex items-center justify-center overflow-hidden rounded-full p-2 after:absolute after:inset-0 after:rounded-full after:bg-gradient-to-l after:from-[rgba(156,178,255,0.24)] after:via-[rgba(186,156,255,0.24)] after:to-[rgba(229,156,255,0.24)] after:p-[1px]">
-        <div> New: Our AI integration just landed</div>
-      </div>
+      <DButton>
+        <span className={cn("text-opacity-80", gradientText)}>
+          Do you like my text
+        </span>
+      </DButton>
+      <DButton className="rounded-md after:rounded-md">
+        {/* <span className={cn("text-opacity-80", gradientText)}>
+          Do you like my text
+        </span> */}
+        <Link href={"https://www.alexfarkas.me/"}>
+          <img
+            className=""
+            src="https://cdn.discordapp.com/avatars/525330274784116746/3d4a0e0e69a0e0281efae3658791386c.png"
+          ></img>
+        </Link>
+      </DButton>
       {/*  */}
     </main>
   );
