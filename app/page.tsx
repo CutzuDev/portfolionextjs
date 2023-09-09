@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="r flex min-h-screen flex-col items-center justify-center gap-10">
+    <main className="flex h-[200vh] flex-col items-center justify-center gap-10">
       <GWrapper>
         <GText opacity="text-opacity-75" className="">
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
