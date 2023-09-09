@@ -27,7 +27,7 @@ function Intro() {
       >
         <div className="group/introCard z-[2] flex flex-col items-center justify-center rounded-3xl border border-white/30 bg-white/10 p-2.5 backdrop-blur-lg transition-colors hover:border-white/40 hover:bg-white/[12.5%]">
           <div className="relative flex flex-col items-center justify-center rounded-2xl border border-white/30  bg-black/60 transition-colors group-hover/introCard:border-white/40">
-            <div className="flex flex-col items-center justify-center gap-5 border-b border-b-white/30 p-5 pt-10 md:p-10 md:pt-20">
+            <div className="flex flex-col items-center justify-center gap-5 border-b group-hover/introCard:border-b-white/40 transition-colors border-b-white/30 p-5 pt-10 md:p-10 md:pt-20">
               <motion.h1
                 className="bg-gradient-to-t from-neutral-500 to-white bg-clip-text text-center text-5xl font-semibold text-transparent sm:text-6xl md:text-7xl"
                 variants={childrenVar("vertical", "spring")}
