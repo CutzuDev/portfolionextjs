@@ -53,7 +53,7 @@ function Intro() {
               variants={childrenVar("vertical", "spring")}
             >
               <Link
-                href={`mailto:alexfarkasbusiness@gmail.com`}
+                href={"#contact"}
                 className="group/contact"
               >
                 <GWrapper className="pr-4.5 gap-2.5 px-5 py-1.5 hover:scale-110">
