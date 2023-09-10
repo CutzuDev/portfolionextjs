@@ -14,7 +14,7 @@ function Contact() {
   const [emailBody, setemailBody] = useState("");
   const rotuer = useRouter();
   function sendMail() {
-    window.location.href = `mailto:nalovisuals@gmail.com?subject=${emailTitle}&body=${emailBody}`;
+    window.location.href = `mailto:alexfarkasbusiness@gmail.com?subject=${emailTitle}&body=${emailBody}`;
     rotuer.refresh();
   }
 
@@ -59,13 +59,15 @@ function Contact() {
                 ></textarea>
               </div>
               <div className="flex w-full flex-col items-center justify-center gap-2.5 p-5">
-                <GWrapper className="gap-2.5 px-6 pl-4">
-                  <Mail
-                    strokeWidth={1.5}
-                    className="stroke-blue-300 transition-all duration-300 group-hover/contact:stroke-blue-100"
-                  />
-                  <span className="text-xl font-bold">Send now!</span>
-                </GWrapper>
+                <div onClick={() => sendMail()}>
+                  <GWrapper className="gap-2.5 px-6 pl-4">
+                    <Mail
+                      strokeWidth={1.5}
+                      className="stroke-blue-300 transition-all duration-300 group-hover/contact:stroke-blue-100"
+                    />
+                    <span className="text-xl font-bold">Send now!</span>
+                  </GWrapper>
+                </div>
               </div>
             </div>
           </div>
