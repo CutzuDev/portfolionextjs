@@ -1,7 +1,4 @@
-"use client";
-
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 
 /**
  * Pass any component between the tags to wrap them
