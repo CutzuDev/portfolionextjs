@@ -18,10 +18,10 @@ function About() {
         whileInView="visible"
         viewport={{ once: true }}
         initial="hidden"
-        className="flex w-full flex-1 items-center justify-center p-5 md:p-10 lg:p-20"
+        className="relative flex w-full flex-1  items-center justify-center p-5 md:p-10 lg:p-20"
       >
-        <div className="flex w-full max-w-[1000px] flex-col items-center justify-center gap-5">
-          <GWrapper hover={false} className="group/aboutMeTag gap-2.5">
+        <div className="flex w-full max-w-[1000px] flex-col items-center justify-center gap-10">
+          <GWrapper hover={false} className="group/aboutMeTag gap-1.5">
             <BadgeInfo className="h-5 stroke-blue-300 transition-all duration-300 group-hover/aboutMeTag:stroke-sky-200 sm:h-6" />
             <GText opacity="text-opacity-80">Some Information About Me</GText>
           </GWrapper>
@@ -63,6 +63,9 @@ function About() {
             </div>
           </div>
         </div>
+        {/* TEST */}
+        <div className="animate-testANIMATION absolute left-0 top-0 -z-[1] aspect-square w-[250px] rounded-full bg-[radial-gradient(ellipse,_rgba(var(--radialGlowColor),1)_0%,_rgba(0,0,0,0)_100%)] blur-3xl transition-all lg:w-[500px]" />
+        <div className="animate-testANIMATION absolute bottom-0 right-0 -z-[1] aspect-square w-[250px] rounded-full bg-[radial-gradient(ellipse,_rgba(var(--radialGlowColor),1)_0%,_rgba(0,0,0,0)_100%)] blur-3xl transition-all lg:w-[500px]" />
       </motion.div>
     </section>
   );
