@@ -25,9 +25,9 @@ function Intro() {
         initial="hidden"
         className="relative flex w-full flex-1 flex-col items-center justify-center p-5 md:p-10 lg:p-20"
       >
-        <div className="group/introCard z-[2] flex flex-col items-center justify-center rounded-3xl border border-white/30 bg-white/10 p-2.5 backdrop-blur-lg transition-colors hover:border-white/40 hover:bg-white/[12.5%]">
-          <div className="relative flex flex-col items-center justify-center rounded-2xl border border-white/30  bg-black/60 transition-colors group-hover/introCard:border-white/40">
-            <div className="flex flex-col items-center justify-center gap-5 border-b group-hover/introCard:border-b-white/40 transition-colors border-b-white/30 p-5 pt-10 md:p-10 md:pt-20">
+        <div className="group/introCard z-[2] flex flex-col items-center justify-center rounded-3xl border border-white/20 bg-white/10 p-2.5 backdrop-blur-lg transition-all duration-300 hover:border-white/25 hover:bg-white/[12%]">
+          <div className="relative flex flex-col items-center justify-center rounded-2xl border border-white/20  bg-black/60 transition-colors group-hover/introCard:border-white/25">
+            <div className="flex flex-col items-center justify-center gap-5 border-b border-b-white/20 p-5 pt-10 transition-colors group-hover/introCard:border-b-white/25 md:p-10 md:pt-20">
               <motion.h1
                 className="bg-gradient-to-t from-neutral-500 to-white bg-clip-text text-center text-5xl font-semibold text-transparent sm:text-6xl md:text-7xl"
                 variants={childrenVar("vertical", "spring")}
@@ -35,7 +35,10 @@ function Intro() {
                 Innovative Web Solutions
               </motion.h1>
               <motion.div variants={childrenVar("vertical", "spring")}>
-                <GWrapper className="group/wizardy flex items-center justify-center gap-1.5 pr-2.5">
+                <GWrapper
+                  hover={false}
+                  className="group/wizardy flex items-center justify-center gap-1.5 pr-2.5"
+                >
                   <Sparkles
                     strokeWidth={1.5}
                     className=" h-5 stroke-blue-300 transition-all duration-300 group-hover/wizardy:stroke-sky-200 sm:h-6"
@@ -72,7 +75,7 @@ function Intro() {
         playsInline
         loop
         autoPlay
-        className="absolute left-1/2 top-1/2  aspect-video h-full max-h-[1000px] -translate-x-1/2 -translate-y-1/2 mix-blend-lighten -hue-rotate-[60deg]"
+        className="absolute left-1/2 top-1/2  aspect-video w-full -translate-x-1/2 -translate-y-1/2 mix-blend-lighten -hue-rotate-[60deg]"
         src={"/assets/blackhole.webm"}
       />
       <div className="absolute left-1/2 top-0 -z-[1] aspect-square h-[1500px] w-[4500px] -translate-x-1/2 -translate-y-[60%] bg-[radial-gradient(ellipse,_rgba(var(--radialGlowColor),0.075)_0%,_rgba(0,0,0,0)_50%)]"></div>
