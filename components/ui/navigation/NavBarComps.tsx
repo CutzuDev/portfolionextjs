@@ -76,7 +76,7 @@ export function NavLink(props: NavLinkT) {
     >
       <Link
         href={props.link}
-        scroll={false}
+        // scroll={false}
         className="cursor-pointer select-none text-sm capitalize transition-all duration-200 hover:text-white/60"
       >
         {props.name}

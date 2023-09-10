@@ -11,7 +11,7 @@ import Link from "next/link";
 // icon props
 // size={20}
 // strokeWidth={1.5}
-// className="fill-neutral-900 stroke-blue-300"
+// className="h-5 stroke-blue-300 transition-all duration-300 group-hover/CHANGEME:stroke-sky-200 sm:h-6"
 
 function Intro() {
   return (
@@ -25,10 +25,10 @@ function Intro() {
         className="relative flex w-full flex-1 flex-col items-center justify-center p-5 md:p-10 lg:p-20"
       >
         <div className="group/introCard z-[2] flex flex-col items-center justify-center rounded-3xl border border-white/20 bg-white/10 p-2.5 backdrop-blur-lg transition-all duration-300 hover:border-white/25 hover:bg-white/[12%]">
-          <div className="relative flex flex-col items-center justify-center rounded-2xl border border-white/20  bg-black/50 transition-colors group-hover/introCard:border-white/25">
-            <div className="flex flex-col items-center justify-center gap-5 border-b border-b-white/20 p-5 pt-10 transition-colors group-hover/introCard:border-b-white/25 md:p-10 md:pt-20">
+          <div className="relative flex flex-col items-center justify-center rounded-2xl border border-white/20  bg-black/50 transition-all duration-300 group-hover/introCard:border-white/25">
+            <div className="flex flex-col items-center justify-center gap-5 border-b border-b-white/20 p-5 pt-10 transition-all duration-300 group-hover/introCard:border-b-white/25 md:p-10 md:pt-20">
               <motion.h1
-                className="bg-gradient-to-t from-neutral-500 to-white bg-clip-text text-center text-5xl font-semibold text-transparent sm:text-6xl md:text-7xl"
+                className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text text-center text-5xl font-semibold text-transparent sm:text-6xl md:text-7xl"
                 variants={childrenVar("vertical", "spring")}
               >
                 Innovative Web Solutions
