@@ -37,8 +37,6 @@ function Contact() {
             <MessagesSquare className="h-5 stroke-blue-300 transition-all duration-300 group-hover/aboutMeTag:stroke-sky-200 sm:h-6" />
             <GText opacity="text-opacity-80">Let's Get In Touch!</GText>
           </GWrapper>
-          <motion.div variants={childrenVar("vertical", "spring")}></motion.div>
-
           <div className="group/contactCard z-[2] flex w-full flex-col items-center justify-center rounded-3xl border border-white/20 bg-white/10 p-2.5 backdrop-blur-lg transition-all duration-300 hover:border-white/25 hover:bg-white/[12%]">
             <div className="relative flex w-full flex-col items-center justify-center rounded-2xl border border-white/20 bg-gradient-to-tr from-black/50 to-sky-500/5 transition-all duration-300 group-hover/contactCard:border-white/25">
               <div className="flex w-full flex-col items-start justify-center gap-2.5 border-b border-b-white/20 p-5 transition-all duration-300 group-hover/contactCard:border-b-white/25 ">
