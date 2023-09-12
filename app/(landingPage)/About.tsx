@@ -10,7 +10,7 @@ function About() {
   return (
     <section
       id="about"
-      className="bg-custom/5 flex min-h-screen w-full select-none flex-col items-center justify-start "
+      className=" flex min-h-screen w-full select-none flex-col items-center justify-start "
     >
       <Divider />
       <motion.div

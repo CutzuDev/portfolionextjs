@@ -69,7 +69,7 @@ function Intro() {
         </div>
       </motion.div>
 
-      <video
+      {/* <video
         preload="false"
         muted
         playsInline
@@ -77,7 +77,7 @@ function Intro() {
         autoPlay
         className="absolute left-1/2 top-1/2  aspect-video w-full -translate-x-1/2 -translate-y-1/2 lg:-translate-y-[64.9%] mix-blend-lighten -hue-rotate-[60deg]"
         src={"/assets/blackhole.webm"}
-      />
+      /> */}
       <div className="absolute left-1/2 top-0 -z-[1] aspect-square h-[1500px] w-[4500px] -translate-x-1/2 -translate-y-[60%] bg-[radial-gradient(ellipse,_rgba(var(--radialGlowColor),0.15)_0%,_rgba(0,0,0,0)_50%)]"></div>
     </section>
   );
