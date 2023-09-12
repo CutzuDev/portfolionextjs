@@ -53,7 +53,7 @@ function About() {
                     HTML, CSS, Tailwind, JavaScript, TypeScript
                   </motion.li>
                   <motion.li variants={childrenVar("vertical", "spring")}>
-                    NextJS, React, Redux, Framer Motion
+                    NextJS, React, Redux, Zustand, Framer Motion
                   </motion.li>
                   <motion.li variants={childrenVar("vertical", "spring")}>
                     Rest APIs, MySQL, TRPC, Prisma, Clerk, Firebase
@@ -64,8 +64,8 @@ function About() {
           </div>
         </div>
         {/* TEST */}
-        <div className="animate-testANIMATION absolute left-0 top-0 -z-[1] aspect-square w-[250px] rounded-full bg-[radial-gradient(ellipse,_rgba(var(--radialGlowColor),1)_0%,_rgba(0,0,0,0)_100%)] blur-3xl transition-all lg:w-[500px]" />
-        <div className="animate-testANIMATION absolute bottom-0 right-0 -z-[1] aspect-square w-[250px] rounded-full bg-[radial-gradient(ellipse,_rgba(var(--radialGlowColor),1)_0%,_rgba(0,0,0,0)_100%)] blur-3xl transition-all lg:w-[500px]" />
+        <div className="absolute left-0 top-0 -z-[1] aspect-square w-[250px] animate-testANIMATION rounded-full bg-[radial-gradient(ellipse,_rgba(var(--radialGlowColor),1)_0%,_rgba(0,0,0,0)_100%)] blur-3xl transition-all lg:w-[500px]" />
+        <div className="absolute bottom-0 right-0 -z-[1] aspect-square w-[250px] animate-testANIMATION rounded-full bg-[radial-gradient(ellipse,_rgba(var(--radialGlowColor),1)_0%,_rgba(0,0,0,0)_100%)] blur-3xl transition-all lg:w-[500px]" />
       </motion.div>
     </section>
   );
