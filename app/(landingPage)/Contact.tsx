@@ -89,6 +89,7 @@ function Contact() {
               <div className="relative flex w-full items-center justify-around gap-5 rounded-2xl border border-white/20 bg-gradient-to-tr from-black/50 to-sky-500/5 px-5 py-3  transition-all duration-300 group-hover/socialsCard:border-white/25">
                 <Link
                   href={"https://github.com/CutzuDev"}
+                  target="_blank"
                   className="rounded-full border border-white/20 bg-white/10 p-2.5"
                 >
                   <motion.div variants={childrenVar("vertical", "spring")}>
@@ -97,6 +98,7 @@ function Contact() {
                 </Link>
                 <Link
                   href={"https://www.linkedin.com/in/alex-farkas-1480b6242/"}
+                  target="_blank"
                   className="rounded-full border border-white/20 bg-white/10 p-2.5"
                 >
                   <motion.div variants={childrenVar("vertical", "spring")}>

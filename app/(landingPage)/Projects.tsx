@@ -82,7 +82,7 @@ function Projects() {
   );
 
   return (
-    <section className="flex min-h-screen w-full select-none flex-col items-center justify-start ">
+    <section id="projects" className="flex min-h-screen w-full select-none flex-col items-center justify-start ">
       <Divider />
       <motion.div
         variants={parentVariant(0.5, 0.25)}
