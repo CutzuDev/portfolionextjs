@@ -31,47 +31,37 @@ const ProjectA: ProjectT[] = [
     description:
       "A Twitter Clone website that replicates Twitter's features with responsive UI, real-time data sync, and secure authentication.",
     photo: "/assets/twitterclone.webp",
-    technologies: ["Tailwind", "Javascript", "NextJS", "Firebase", "Redux"],
-    type: "client",
-  },
-  {
-    title: "Twitter Clone",
-    demoLink: "https://cutzutwitterclone.vercel.app/",
-    repositoryLink: "https://github.com/CutzuDev/twitterclone",
-    description:
-      "A Twitter Clone website that replicates Twitter's features with responsive UI, real-time data sync, and secure authentication.",
-    photo: "/assets/twitterclone.webp",
-    technologies: ["Tailwind", "Javascript", "NextJS", "Firebase", "Redux"],
-    type: "client",
-  },
-  {
-    title: "Twitter Clone SELF",
-    demoLink: "https://cutzutwitterclone.vercel.app/",
-    repositoryLink: "https://github.com/CutzuDev/twitterclone",
-    description:
-      "A Twitter Clone website that replicates Twitter's features with responsive UI, real-time data sync, and secure authentication.",
-    photo: "/assets/twitterclone.webp",
-    technologies: ["Tailwind", "Javascript", "NextJS", "Firebase", "Redux"],
+    technologies: ["Tailwind", "JavaScript", "NextJS", "Firebase", "Redux"],
     type: "self",
   },
   {
-    title: "Twitter Clone SELF",
-    demoLink: "https://cutzutwitterclone.vercel.app/",
-    repositoryLink: "https://github.com/CutzuDev/twitterclone",
+    title: "Virtual Internship",
+    demoLink: "https://nft-v-internship.vercel.app/",
+    repositoryLink: "https://github.com/CutzuDev/cutzu-internship",
     description:
-      "A Twitter Clone website that replicates Twitter's features with responsive UI, real-time data sync, and secure authentication.",
-    photo: "/assets/twitterclone.webp",
-    technologies: ["Tailwind", "Javascript", "NextJS", "Firebase", "Redux"],
+      "This project was a Virtual Internship mockup where I had to create all the functionability using the data provided via an API.",
+    photo: "/assets/nftinternship.webp",
+    technologies: ["HTML", "CSS", "JavaScript", "React", "External API"],
     type: "self",
   },
   {
-    title: "Twitter Clone SELF",
-    demoLink: "https://cutzutwitterclone.vercel.app/",
-    repositoryLink: "https://github.com/CutzuDev/twitterclone",
+    title: "Google Clone",
+    demoLink: "https://googleclone-three.vercel.app/",
+    repositoryLink: "https://github.com/CutzuDev/GoogleClone",
     description:
-      "A Twitter Clone website that replicates Twitter's features with responsive UI, real-time data sync, and secure authentication.",
-    photo: "/assets/twitterclone.webp",
-    technologies: ["Tailwind", "Javascript", "NextJS", "Firebase", "Redux"],
+      "Google Search Clone built using the Google API to retrieve Indexed data from all the available websites.",
+    photo: "/assets/googleclone.webp",
+    technologies: ["CSS", "JavaScript", "React", "External API"],
+    type: "self",
+  },
+  {
+    title: "Gmail Clone",
+    demoLink: "https://gmailclone-liart.vercel.app/",
+    repositoryLink: "https://github.com/CutzuDev/GoogleClone",
+    description:
+      "ECommerce application which displays available books, has search and sorting capabilities also having a loading state and add to cart functionability.",
+    photo: "/assets/gmailclone.webp",
+    technologies: ["CSS", "JavaScript", "React", "Firebase", "Redux"],
     type: "self",
   },
 ];
@@ -95,12 +85,15 @@ function Projects() {
         className="flex w-full flex-1 items-start justify-center p-5 md:p-10 lg:p-20"
       >
         <div className="flex w-full max-w-[1500px] flex-col items-center justify-start gap-10 lg:items-start lg:gap-5 ">
-          <div className="flex items-center justify-center gap-2.5 rounded-full border border-sky-200/30 bg-sky-200/10 px-6 py-3 text-lg">
-            <button onClick={() => setProjectType("client")}>
+          <div className="flex items-center justify-center gap-2.5 rounded-full border border-sky-200/30 bg-sky-200/10 px-6 py-3 text-sm md:text-lg">
+            <button className="active:scale-105 transition-transform" onClick={() => setProjectType("client")}>
               Client Work
             </button>
-            /<button onClick={() => setProjectType("self")}>Self</button>/
-            <button onClick={() => setProjectType("all")}>All</button>
+            /
+            <button className="active:scale-105 transition-transform" onClick={() => setProjectType("self")}>
+              Self Projects
+            </button>
+            /<button className="active:scale-105 transition-transform" onClick={() => setProjectType("all")}>All Projects</button>
           </div>
           <div className="flex w-full flex-col items-center justify-start gap-5">
             <GWrapper hover={false} className="group/projectsTag gap-1.5">
@@ -133,17 +126,17 @@ function ProjectC(props: ProjectT) {
           <Image src={props.photo} fill alt="" />
         </div>
         <div className="flex w-full items-center justify-between border-b border-b-white/20 p-2.5">
-          <span className="w-full bg-gradient-to-t from-neutral-400 to-white bg-clip-text text-lg font-bold text-transparent md:text-xl lg:text-2xl">
+          <span className="w-full bg-gradient-to-t from-neutral-400 to-white bg-clip-text text-lg font-bold text-transparent md:text-xl">
             {props.title}
           </span>
           <div className="flex items-center justify-between gap-5">
             {props.demoLink && (
-              <Link href={"/123"}>
+              <Link target="_blank" href={props.demoLink}>
                 <LinkIconTest className="h-4 stroke-blue-300 transition-all duration-300 hover:stroke-sky-200 sm:h-5" />
               </Link>
             )}
             {props.repositoryLink && (
-              <Link href={props.repositoryLink}>
+              <Link target="_blank" href={props.repositoryLink}>
                 <Github className="h-4 stroke-blue-300 transition-all duration-300 hover:stroke-sky-200 sm:h-5" />
               </Link>
             )}
