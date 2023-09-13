@@ -82,7 +82,10 @@ function Projects() {
   );
 
   return (
-    <section id="projects" className="flex min-h-screen w-full select-none flex-col items-center justify-start ">
+    <section
+      id="projects"
+      className="flex min-h-screen w-full select-none flex-col items-center justify-start "
+    >
       <Divider />
       <motion.div
         variants={parentVariant(0.5, 0.25)}
@@ -93,8 +96,10 @@ function Projects() {
       >
         <div className="flex w-full max-w-[1500px] flex-col items-center justify-start gap-10 lg:items-start lg:gap-5 ">
           <div className="flex items-center justify-center gap-2.5 rounded-full border border-sky-200/30 bg-sky-200/10 px-6 py-3 text-lg">
-            <button onClick={() => setProjectType("client")}>Client</button>/
-            <button onClick={() => setProjectType("self")}>Self</button>/
+            <button onClick={() => setProjectType("client")}>
+              Client Work
+            </button>
+            /<button onClick={() => setProjectType("self")}>Self</button>/
             <button onClick={() => setProjectType("all")}>All</button>
           </div>
           <div className="flex w-full flex-col items-center justify-start gap-5">
@@ -110,7 +115,7 @@ function Projects() {
                   return item;
                 }
               }).map((item, index) => (
-                <ProjectC {...item} />
+                <ProjectC {...item} key={index} />
               ))}
             </div>
           </div>
