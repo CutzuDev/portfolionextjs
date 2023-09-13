@@ -25,12 +25,27 @@ type ProjectT = {
 
 const ProjectA: ProjectT[] = [
   {
+    title: "Nalo Visuals",
+    demoLink: "hhttps://editorport2.vercel.app/",
+    description:
+      "Portfolio website suited for a editor's needs, includes skills display, projects display, client testimonials, etc.",
+    photo: "/assets/projects/nalovisuals.webp",
+    technologies: [
+      "NextJS",
+      "TypeScript",
+      "Tailwind",
+      "Framer Motion",
+      "Redux",
+    ],
+    type: "client",
+  },
+  {
     title: "Twitter Clone",
     demoLink: "https://cutzutwitterclone.vercel.app/",
     repositoryLink: "https://github.com/CutzuDev/twitterclone",
     description:
       "A Twitter Clone website that replicates Twitter's features with responsive UI, real-time data sync, and secure authentication.",
-    photo: "/assets/twitterclone.webp",
+    photo: "/assets/projects/twitterclone.webp",
     technologies: ["Tailwind", "JavaScript", "NextJS", "Firebase", "Redux"],
     type: "self",
   },
@@ -40,7 +55,7 @@ const ProjectA: ProjectT[] = [
     repositoryLink: "https://github.com/CutzuDev/cutzu-internship",
     description:
       "This project was a Virtual Internship mockup where I had to create all the functionability using the data provided via an API.",
-    photo: "/assets/nftinternship.webp",
+    photo: "/assets/projects/nftinternship.webp",
     technologies: ["HTML", "CSS", "JavaScript", "React", "External API"],
     type: "self",
   },
@@ -50,7 +65,7 @@ const ProjectA: ProjectT[] = [
     repositoryLink: "https://github.com/CutzuDev/GoogleClone",
     description:
       "Google Search Clone built using the Google API to retrieve Indexed data from all the available websites.",
-    photo: "/assets/googleclone.webp",
+    photo: "/assets/projects/googleclone.webp",
     technologies: ["CSS", "JavaScript", "React", "External API"],
     type: "self",
   },
@@ -60,7 +75,7 @@ const ProjectA: ProjectT[] = [
     repositoryLink: "https://github.com/CutzuDev/GoogleClone",
     description:
       "ECommerce application which displays available books, has search and sorting capabilities also having a loading state and add to cart functionability.",
-    photo: "/assets/gmailclone.webp",
+    photo: "/assets/projects/gmailclone.webp",
     technologies: ["CSS", "JavaScript", "React", "Firebase", "Redux"],
     type: "self",
   },
@@ -86,14 +101,26 @@ function Projects() {
       >
         <div className="flex w-full max-w-[1500px] flex-col items-center justify-start gap-10 lg:items-start lg:gap-5 ">
           <div className="flex items-center justify-center gap-2.5 rounded-full border border-sky-200/30 bg-sky-200/10 px-6 py-3 text-sm md:text-lg">
-            <button className="active:scale-105 transition-transform" onClick={() => setProjectType("client")}>
+            <button
+              className="transition-transform active:scale-105"
+              onClick={() => setProjectType("client")}
+            >
               Client Work
             </button>
             /
-            <button className="active:scale-105 transition-transform" onClick={() => setProjectType("self")}>
+            <button
+              className="transition-transform active:scale-105"
+              onClick={() => setProjectType("self")}
+            >
               Self Projects
             </button>
-            /<button className="active:scale-105 transition-transform" onClick={() => setProjectType("all")}>All Projects</button>
+            /
+            <button
+              className="transition-transform active:scale-105"
+              onClick={() => setProjectType("all")}
+            >
+              All Projects
+            </button>
           </div>
           <div className="flex w-full flex-col items-center justify-start gap-5">
             <GWrapper hover={false} className="group/projectsTag gap-1.5">
