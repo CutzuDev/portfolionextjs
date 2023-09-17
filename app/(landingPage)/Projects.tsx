@@ -26,7 +26,7 @@ type ProjectT = {
 const ProjectA: ProjectT[] = [
   {
     title: "Nalo Visuals",
-    demoLink: "hhttps://editorport2.vercel.app/",
+    demoLink: "https://www.nalovisuals.com/",
     description:
       "Portfolio website suited for a editor's needs, includes skills display, projects display, client testimonials, etc.",
     photo: "/assets/projects/nalovisuals.webp",
@@ -100,7 +100,7 @@ function Projects() {
         className="flex w-full flex-1 items-start justify-center p-5 md:p-10 lg:p-20"
       >
         <div className="flex w-full max-w-[1500px] flex-col items-center justify-start gap-10 lg:items-start lg:gap-5 ">
-          <div className="flex items-center justify-center gap-2.5 rounded-full border border-sky-200/30 bg-sky-200/10 px-6 py-3 text-sm md:text-lg">
+          <div className="flex items-center justify-center gap-2.5 rounded-full border border-sky-200/30 bg-sky-200/10 px-6 py-3 text-sm md:text-base">
             <button
               className="transition-transform active:scale-105"
               onClick={() => setProjectType("client")}
