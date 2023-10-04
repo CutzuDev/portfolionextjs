@@ -42,7 +42,7 @@ function Intro() {
                     strokeWidth={1.5}
                     className="h-5 stroke-blue-300 transition-all duration-300 group-hover/wizardy:stroke-sky-200 sm:h-6"
                   />
-                  <GText opacity="text-opacity-80" className="">
+                  <GText opacity="text-opacity-80" resizing={false} className="text-xs py-1 sm:py-0">
                     Performing Code Wizardry in Every Project
                   </GText>
                 </GWrapper>
