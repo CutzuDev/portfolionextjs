@@ -110,6 +110,10 @@ function Contact() {
           </motion.div>
         </div>
       </motion.div>
+      <div className="inline lg:hidden ">
+        <Divider />
+      </div>
+
       <div className="absolute bottom-0 left-1/2 -z-[1] aspect-square h-[1500px] w-[4500px] -translate-x-1/2 translate-y-[65%] bg-[radial-gradient(ellipse,_rgba(var(--radialGlowColor),0.15)_0%,_rgba(0,0,0,0)_50%)]"></div>
     </section>
   );
