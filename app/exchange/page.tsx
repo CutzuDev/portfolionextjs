@@ -19,16 +19,24 @@ export default function Home() {
 
   useEffect(() => {
     if (!Number.isNaN(+valueRon) && +valueRon !== 0) {
-      +valueRon > 25
-        ? setcalculatedRon((+valueRon * 20) / 100)
-        : setcalculatedRon((+valueRon * 30) / 100);
+      if (+valueEur > 100) {
+        setcalculatedEur((+valueEur * 10) / 100);
+      } else if (+valueEur > 50) {
+        setcalculatedEur((+valueEur * 15) / 100);
+      } else {
+        setcalculatedEur((+valueEur * 30) / 100);
+      }
     } else if (Number.isNaN(+valueRon)) {
       setvalueRon(0);
     }
     if (!Number.isNaN(+valueEur) && +valueEur !== 0) {
-      +valueEur > 5
-        ? setcalculatedEur((+valueEur * 20) / 100)
-        : setcalculatedEur((+valueEur * 30) / 100);
+      if (+valueEur > 20) {
+        setcalculatedEur((+valueEur * 10) / 100);
+      } else if (+valueEur > 10) {
+        setcalculatedEur((+valueEur * 15) / 100);
+      } else {
+        setcalculatedEur((+valueEur * 30) / 100);
+      }
     } else if (Number.isNaN(+valueEur)) {
       setvalueEur(0);
     }
@@ -41,10 +49,10 @@ export default function Home() {
         whileInView="visible"
         viewport={{ once: true }}
         initial="hidden"
-        className="flex min-h-screen flex-col items-center justify-center gap-10 "
+        className="flex min-h-screen flex-col items-center justify-center gap-10 p-2.5 "
       >
         <Divider />
-        <div className="flex flex-col items-start justify-center gap-2.5">
+        <div className="flex  flex-col items-start justify-center gap-2.5">
           <div className="mb-5 flex w-full flex-col items-start justify-center gap-2.5">
             <motion.h1
               className="mb-5 w-full bg-gradient-to-t from-neutral-400 to-white bg-clip-text text-center text-2xl font-bold text-transparent md:text-4xl"
@@ -58,12 +66,26 @@ export default function Home() {
             >
               Taxa:
             </motion.span>
-            <motion.span
-              className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text font-semibold text-transparent"
-              variants={childrenVar("vertical", "spring")}
-            >
-              {`Sub 10€ -> 30% , Peste 10€ -> 20%`}
-            </motion.span>
+            <div className="flex flex-wrap items-center justify-start gap-2.5">
+              <motion.span
+                className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text font-semibold text-transparent"
+                variants={childrenVar("vertical", "spring")}
+              >
+                {`Sub 10€ -> 30%`}
+              </motion.span>
+              <motion.span
+                className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text font-semibold text-transparent"
+                variants={childrenVar("vertical", "spring")}
+              >
+                {`Peste 10€ -> 15%`}
+              </motion.span>
+              <motion.span
+                className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text font-semibold text-transparent"
+                variants={childrenVar("vertical", "spring")}
+              >
+                {`Peste 20€ -> 10%`}
+              </motion.span>
+            </div>
             <motion.span
               className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text text-xl font-semibold text-transparent"
               variants={childrenVar("vertical", "spring")}
@@ -98,95 +120,96 @@ export default function Home() {
             </motion.ul>
           </div>
         </div>
-
-        <div className="flex flex-col items-start justify-center gap-2.5">
-          <motion.span
-            variants={childrenVar("vertical", "spring")}
-            className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text font-semibold text-transparent"
-          >
-            RON
-          </motion.span>
-          <div className="flex flex-col items-start justify-center gap-10 md:flex-row md:items-end">
-            <div className="flex flex-col items-start justify-center gap-2.5">
-              <motion.span
-                variants={childrenVar("vertical", "spring")}
-                className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text font-semibold text-transparent"
-              >
-                Input
-              </motion.span>
-              <motion.input
-                variants={childrenVar("vertical", "spring")}
-                className="w-40 rounded-md border border-white/20 bg-white/5 p-2.5 outline-none"
-                value={valueRon}
-                maxLength={100}
-                type="number"
-                onChange={(e) => setvalueRon(e.target.value)}
-              />
-            </div>
-            <div className="flex flex-col items-start justify-center gap-2.5">
-              <motion.span
-                variants={childrenVar("vertical", "spring")}
-                className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text font-semibold text-transparent"
-              >
-                Output
-              </motion.span>
-              <motion.div
-                variants={childrenVar("vertical", "spring")}
-                className="w-40 rounded-md border border-white/20 bg-white/5 p-2.5 outline-none"
-              >
-                {valueRon ? (+valueRon - +calculatedRon).toFixed(1) : 0}
+        <div className=" flex w-full items-center justify-center md:gap-10">
+          <div className="flex w-full flex-col items-start justify-center gap-2.5">
+            <motion.span
+              variants={childrenVar("vertical", "spring")}
+              className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text font-semibold text-transparent"
+            >
+              RON
+            </motion.span>
+            <div className="flex flex-col items-start justify-center gap-5 md:flex-row md:items-end md:gap-7">
+              <div className="flex flex-col items-start justify-center gap-2.5">
+                <motion.span
+                  variants={childrenVar("vertical", "spring")}
+                  className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text font-semibold text-transparent"
+                >
+                  Input
+                </motion.span>
+                <motion.input
+                  variants={childrenVar("vertical", "spring")}
+                  className=" w-20 rounded-md border border-white/20 bg-white/5 p-2.5 outline-none md:w-32"
+                  value={valueRon}
+                  maxLength={100}
+                  type="number"
+                  onChange={(e) => setvalueRon(e.target.value)}
+                />
+              </div>
+              <div className="flex flex-col items-start justify-center gap-2.5">
+                <motion.span
+                  variants={childrenVar("vertical", "spring")}
+                  className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text font-semibold text-transparent"
+                >
+                  Output
+                </motion.span>
+                <motion.div
+                  variants={childrenVar("vertical", "spring")}
+                  className=" w-20 rounded-md border border-white/20 bg-white/5 p-2.5 outline-none md:w-32"
+                >
+                  {valueRon ? (+valueRon - +calculatedRon).toFixed(1) : 0}
+                </motion.div>
+              </div>
+              <motion.div variants={childrenVar("vertical", "spring")}>
+                <CopyButton
+                  stringText={`${(+valueRon - +calculatedRon).toFixed(0)}`}
+                />
               </motion.div>
             </div>
-            <motion.div variants={childrenVar("vertical", "spring")}>
-              <CopyButton
-                stringText={`${(+valueRon - +calculatedRon).toFixed(0)}`}
-              />
-            </motion.div>
           </div>
-        </div>
-        <div className="flex flex-col items-start justify-center gap-2.5">
-          <motion.span
-            variants={childrenVar("vertical", "spring")}
-            className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text font-semibold text-transparent"
-          >
-            EUR
-          </motion.span>
-          <div className="flex flex-col items-start justify-center gap-10 md:flex-row md:items-end">
-            <div className="flex flex-col items-start justify-center gap-2.5">
-              <motion.span
-                variants={childrenVar("vertical", "spring")}
-                className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text font-semibold text-transparent"
-              >
-                Input
-              </motion.span>
-              <motion.input
-                variants={childrenVar("vertical", "spring")}
-                className="w-40 rounded-md border border-white/20 bg-white/5 p-2.5 outline-none"
-                value={valueEur}
-                maxLength={100}
-                type="number"
-                onChange={(e) => setvalueEur(e.target.value)}
-              />
-            </div>
-            <div className="flex flex-col items-start justify-center gap-2.5">
-              <motion.span
-                variants={childrenVar("vertical", "spring")}
-                className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text font-semibold text-transparent"
-              >
-                Output
-              </motion.span>
-              <motion.div
-                variants={childrenVar("vertical", "spring")}
-                className="w-40 rounded-md border border-white/20 bg-white/5 p-2.5 outline-none"
-              >
-                {valueEur ? (+valueEur - +calculatedEur).toFixed(1) : 0}
+          <div className="flex w-full flex-col items-start justify-center gap-2.5">
+            <motion.span
+              variants={childrenVar("vertical", "spring")}
+              className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text font-semibold text-transparent"
+            >
+              EUR
+            </motion.span>
+            <div className="flex flex-col items-start justify-center gap-5 md:flex-row md:items-end md:gap-7">
+              <div className="flex flex-col items-start justify-center gap-2.5">
+                <motion.span
+                  variants={childrenVar("vertical", "spring")}
+                  className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text font-semibold text-transparent"
+                >
+                  Input
+                </motion.span>
+                <motion.input
+                  variants={childrenVar("vertical", "spring")}
+                  className=" w-20 rounded-md border border-white/20 bg-white/5 p-2.5 outline-none md:w-32"
+                  value={valueEur}
+                  maxLength={100}
+                  type="number"
+                  onChange={(e) => setvalueEur(e.target.value)}
+                />
+              </div>
+              <div className="flex flex-col items-start justify-center gap-2.5">
+                <motion.span
+                  variants={childrenVar("vertical", "spring")}
+                  className="bg-gradient-to-t from-neutral-400 to-white bg-clip-text font-semibold text-transparent"
+                >
+                  Output
+                </motion.span>
+                <motion.div
+                  variants={childrenVar("vertical", "spring")}
+                  className=" w-20 rounded-md border border-white/20 bg-white/5 p-2.5 outline-none md:w-32"
+                >
+                  {valueEur ? (+valueEur - +calculatedEur).toFixed(1) : 0}
+                </motion.div>
+              </div>
+              <motion.div variants={childrenVar("vertical", "spring")}>
+                <CopyButton
+                  stringText={`${(+valueEur - +calculatedEur).toFixed(0)}`}
+                />
               </motion.div>
             </div>
-            <motion.div variants={childrenVar("vertical", "spring")}>
-              <CopyButton
-                stringText={`${(+valueEur - +calculatedEur).toFixed(0)}`}
-              />
-            </motion.div>
           </div>
         </div>
       </motion.div>
