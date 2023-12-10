@@ -19,9 +19,9 @@ export default function Home() {
 
   useEffect(() => {
     if (!Number.isNaN(+valueRon) && +valueRon !== 0) {
-      if (+valueEur > 100) {
+      if (+valueEur >= 100) {
         setcalculatedEur((+valueEur * 10) / 100);
-      } else if (+valueEur > 50) {
+      } else if (+valueEur >= 50) {
         setcalculatedEur((+valueEur * 15) / 100);
       } else {
         setcalculatedEur((+valueEur * 30) / 100);
@@ -30,9 +30,9 @@ export default function Home() {
       setvalueRon(0);
     }
     if (!Number.isNaN(+valueEur) && +valueEur !== 0) {
-      if (+valueEur > 20) {
+      if (+valueEur >= 20) {
         setcalculatedEur((+valueEur * 10) / 100);
-      } else if (+valueEur > 10) {
+      } else if (+valueEur >= 10) {
         setcalculatedEur((+valueEur * 15) / 100);
       } else {
         setcalculatedEur((+valueEur * 30) / 100);
