@@ -30,14 +30,18 @@ const ProjectA: ProjectT[] = [
     description:
       "Portfolio website suited for a editor's needs, includes skills display, projects display, client testimonials, etc.",
     photo: "/assets/projects/nalovisuals.webp",
-    technologies: [
-      "NextJS",
-      "TypeScript",
-      "Tailwind",
-      "Framer Motion",
-      "Redux",
-    ],
+    technologies: ["NextJS", "TypeScript", "Tailwind", "Framer Motion"],
     type: "client",
+  },
+  {
+    title: "APILess YT Fetcher",
+    demoLink: "https://apilessytvideo.vercel.app/",
+    description: `No external api and no database used.<br/>
+    Never worry about limitations or database managment.<br/>
+    Perfect for a Video Editor's portfolio!`,
+    photo: "/assets/projects/noapiyt.webp",
+    technologies: ["NextJS", "TypeScript", "Tailwind"],
+    type: "self",
   },
   {
     title: "Twitter Clone",
@@ -46,7 +50,7 @@ const ProjectA: ProjectT[] = [
     description:
       "A Twitter Clone website that replicates Twitter's features with responsive UI, real-time data sync, and secure authentication.",
     photo: "/assets/projects/twitterclone.webp",
-    technologies: ["Tailwind", "JavaScript", "NextJS", "Firebase", "Redux"],
+    technologies: ["NextJS", "Tailwind", "JavaScript", "Firebase", "Redux"],
     type: "self",
   },
   {
@@ -56,7 +60,7 @@ const ProjectA: ProjectT[] = [
     description:
       "This project was a Virtual Internship mockup where I had to create all the functionability using the data provided via an API.",
     photo: "/assets/projects/nftinternship.webp",
-    technologies: ["HTML", "CSS", "JavaScript", "React", "External API"],
+    technologies: ["React", "JavaScript", "External API"],
     type: "self",
   },
   {
@@ -66,7 +70,7 @@ const ProjectA: ProjectT[] = [
     description:
       "Google Search Clone built using the Google API to retrieve Indexed data from all the available websites.",
     photo: "/assets/projects/googleclone.webp",
-    technologies: ["CSS", "JavaScript", "React", "External API"],
+    technologies: ["React", "JavaScript", "External API"],
     type: "self",
   },
   {
@@ -76,7 +80,7 @@ const ProjectA: ProjectT[] = [
     description:
       "ECommerce application which displays available books, has search and sorting capabilities also having a loading state and add to cart functionability.",
     photo: "/assets/projects/gmailclone.webp",
-    technologies: ["CSS", "JavaScript", "React", "Firebase", "Redux"],
+    technologies: ["React", "JavaScript", "Firebase", "Redux"],
     type: "self",
   },
 ];
@@ -147,8 +151,8 @@ function Projects() {
 
 function ProjectC(props: ProjectT) {
   return (
-    <div className="flex items-center justify-center rounded-3xl border border-white/20 bg-white/10 p-2.5">
-      <div className="flex max-w-[302px] flex-col items-start justify-center rounded-2xl border border-white/20 bg-black/50">
+    <div className="flex  items-center justify-center rounded-3xl border border-white/20 bg-white/10 p-2.5">
+      <div className="flex h-full min-h-[400px] max-w-[302px] flex-col items-start justify-start rounded-2xl border border-white/20 bg-black/50">
         <div className="relative aspect-video w-[300px] overflow-hidden rounded-t-2xl border-b border-b-white/20">
           <Image src={props.photo} fill alt="" />
         </div>
@@ -169,8 +173,7 @@ function ProjectC(props: ProjectT) {
             )}
           </div>
         </div>
-        <p className="max-w-[300px] border-b border-b-white/20 p-2.5 text-sm text-white text-opacity-50">
-          {props.description}
+        <p dangerouslySetInnerHTML={{__html: props.description}} className="max-w-[300px] border-b border-b-white/20 p-2.5 text-sm text-white text-opacity-50">
         </p>
         <div className="flex flex-col items-start justify-center gap-2.5 p-2.5">
           <span className=" bg-gradient-to-t from-neutral-400 to-white bg-clip-text text-transparent">
