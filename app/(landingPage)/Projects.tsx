@@ -33,16 +33,16 @@ const ProjectA: ProjectT[] = [
     technologies: ["NextJS", "TypeScript", "Tailwind", "Framer Motion"],
     type: "client",
   },
-  // {
-  //   title: "APILess YT Fetcher",
-  //   demoLink: "https://apilessytvideo.vercel.app/",
-  //   description: `No external api and no database used.<br/>
-  //   Never worry about limitations or database managment.<br/>
-  //   Perfect for a Video Editor's portfolio!`,
-  //   photo: "/assets/projects/noapiyt.webp",
-  //   technologies: ["NextJS", "TypeScript", "Tailwind"],
-  //   type: "self",
-  // },
+  {
+    title: "VFX Enerr",
+    demoLink: "https://www.vfxenerr.com/",
+    description: `Portfolio website / CTA Website<br/>
+    Includes channels, testimonials and past work.<br/>
+    Perfect for a Video Editor's portfolio!`,
+    photo: "/assets/projects/vfxenerr.webp",
+    technologies: ["NextJS", "TypeScript", "Tailwind"],
+    type: "self",
+  },
   {
     title: "Twitter Clone",
     demoLink: "https://cutzutwitterclone.vercel.app/",
