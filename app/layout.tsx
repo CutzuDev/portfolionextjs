@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     siteName: "Alex Farkas",
     title: "Alex Farkas - Web Developer",
     description:
-      "A 18 year-old Web Developer who aspires to build customisable, beautiful and responsive Web Apps.",
+      "A Developer who aspires to build customisable, beautiful and responsive Web Apps.",
     images: [{ url: "/assets/meta/preview.webp" }],
   },
   twitter: { card: "summary_large_image" },
