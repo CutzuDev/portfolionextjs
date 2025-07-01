@@ -26,7 +26,7 @@ type ProjectT = {
 const ProjectA: ProjectT[] = [
   {
     title: "Nalo Visuals",
-    demoLink: "https://www.nalovisuals.com/",
+    demoLink: "https://nalovisuals.vercel.app/",
     description:
       "Portfolio website suited for a editor's needs, includes skills display, projects display, client testimonials, etc.",
     photo: "/assets/projects/nalovisuals.webp",
